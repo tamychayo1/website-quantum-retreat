@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quantum Retreat — August 20–23, 2026 · Cuernavaca</title>
+<meta name="description" content="A four-day immersive reset for founders, operators and investors. Integrating physiology, emotional intelligence and regenerative medicine. Cuernavaca, Mexico — August 2026.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Raleway:wght@200;300;400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  /* Official primary palette — Manual de Identidad */
+  --qblack:#000000;
+  --white:#ffffff;
+  /* Official secondary palette */
+  --dcharcoal:#2c2c2c;
+  --linen:#edeae3;
+  --mid-grey:#4a4a4a;
+  /* Extended tonal scale — lightened for legibility */
+  --warm-white:#f5f4f1;
+  --pt200:#e0e0de;
+  --silver:#cfcfcd;
+  --pt300:#c2c2c0;
+  --pt400:#a8a8a6;
+  --pt500:#8e8e8c;
+  --pt600:#6b6b69;
+  --pt700:#2e2e2c;
+  --fd:'Cormorant Garamond',Georgia,serif;
+  --fb:'Raleway','Helvetica Neue',sans-serif;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{background:var(--qblack);color:var(--white);font-family:var(--fb);font-weight:300;font-size:15px;line-height:26px;letter-spacing:.02em;overflow-x:hidden;max-width:1280px;margin:0 auto;}
+
+/* NAV */
+nav{position:fixed;top:0;left:50%;transform:translateX(-50%);width:100%;max-width:1280px;z-index:100;padding:32px 72px;display:flex;align-items:center;justify-content:space-between;background:linear-gradient(to bottom,rgba(0,0,0,.97) 0%,transparent 100%);}
+
+/* LOGO — official construction per Manual de Identidad:
+   THE small top-left · QUANTUM monumental · METHOD small bottom-right (staggered) */
+.wm{display:inline-flex;flex-direction:column;line-height:1;}
+.wm-the{font-family:var(--fb);font-weight:300;font-size:7px;letter-spacing:.6em;text-transform:uppercase;color:var(--pt400);display:block;align-self:flex-start;margin-bottom:0px;}
+.wm-q{font-family:var(--fd);font-weight:400;font-size:34px;letter-spacing:.03em;color:var(--white);line-height:0.9;display:block;}
+.wm-m{font-family:var(--fb);font-weight:300;font-size:6.5px;letter-spacing:.52em;text-transform:uppercase;color:var(--pt400);display:block;margin-top:4px;align-self:flex-end;}
+
+.btn{display:inline-block;text-decoration:none;font-family:var(--fb);font-weight:400;font-size:8px;letter-spacing:.35em;text-transform:uppercase;color:var(--white);border:1px solid var(--white);padding:12px 28px;transition:color .3s,border-color .3s;background:transparent;cursor:pointer;}
+.btn:hover{color:var(--silver);border-color:var(--silver);}
+
+/* HERO */
+.hero{min-height:100vh;display:grid;grid-template-rows:1fr auto;padding:160px 72px 80px;position:relative;overflow:hidden;border-bottom:1px solid var(--pt700);}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 50% at 70% 30%,rgba(255,255,255,.018) 0%,transparent 70%),radial-gradient(ellipse 40% 60% at 20% 80%,rgba(255,255,255,.012) 0%,transparent 60%);pointer-events:none;}
+.hero-inner{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;width:100%;}
+.h-over{font-family:var(--fb);font-weight:400;font-size:8px;letter-spacing:.45em;text-transform:uppercase;color:var(--pt400);margin-bottom:96px;animation:up 1.2s ease both;}
+
+/* Hero wordmark — centered on page, internal stagger: THE top-left, QUANTUM massive, METHOD bottom-right */
+.hwl{margin-bottom:40px;animation:up 1.2s ease .08s both;display:inline-flex;flex-direction:column;align-items:flex-start;text-align:left;}
+.hwl-the{display:block;font-family:var(--fb);font-weight:200;font-size:clamp(9px,1vw,13px);letter-spacing:1em;text-transform:uppercase;color:var(--pt500);margin-bottom:0;align-self:flex-start;}
+.hwl-q{display:block;font-family:var(--fd);font-weight:400;font-size:clamp(80px,14vw,156px);letter-spacing:.03em;line-height:.88;color:var(--white);}
+.hwl-r{display:block;font-family:var(--fb);font-weight:200;font-size:clamp(9px,1.4vw,14px);letter-spacing:1.2em;text-transform:uppercase;color:var(--pt400);align-self:center;}
+
+.h-rule{width:40px;height:1px;background:var(--silver);margin:64px auto 40px;animation:up 1.2s ease .16s both;}
+.h-tag{font-family:var(--fd);font-style:italic;font-weight:300;font-size:clamp(18px,2.4vw,24px);line-height:1.5;color:var(--pt200);max-width:560px;margin-bottom:64px;animation:up 1.2s ease .22s both;text-align:center;}
+.h-cta{display:flex;flex-direction:column;align-items:center;gap:32px;animation:up 1.2s ease .28s both;}
+.h-meta{font-family:var(--fb);font-weight:300;font-size:11px;letter-spacing:.2em;color:var(--pt500);text-align:center;}
+.h-bottom{position:relative;z-index:1;display:flex;justify-content:center;align-items:flex-end;gap:80px;padding-top:64px;border-top:1px solid var(--pt700);animation:up 1.2s ease .36s both;}
+.hbs{display:flex;flex-direction:column;gap:6px;align-items:center;text-align:center;}
+.hbs-v{font-family:var(--fd);font-weight:300;font-size:28px;color:var(--white);letter-spacing:.02em;}
+.hbs-l{font-size:8px;letter-spacing:.35em;text-transform:uppercase;color:var(--pt500);}
+@keyframes up{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+
+/* SECTIONS */
+section{padding:140px 72px;border-bottom:1px solid var(--pt700);text-align:center;}
+.s-label{font-family:var(--fb);font-weight:400;font-size:8px;letter-spacing:.3em;text-transform:uppercase;color:var(--pt400);display:block;margin-bottom:40px;}
+.t-h2{font-family:var(--fd);font-weight:300;font-size:clamp(26px,4vw,32px);line-height:1.25;letter-spacing:.01em;color:var(--white);}
+.t-body{font-family:var(--fb);font-weight:300;font-size:15px;line-height:26px;letter-spacing:.02em;color:var(--pt300);}
+.t-pull{font-family:var(--fd);font-style:italic;font-weight:300;font-size:clamp(20px,2.8vw,26px);line-height:1.45;color:var(--white);padding:0 40px;border-left:none;border-top:1px solid var(--silver);padding-top:40px;margin-top:8px;}
+.t-caption{font-family:var(--fb);font-weight:300;font-size:11px;line-height:18px;letter-spacing:.1em;color:var(--pt500);}
+
+/* MANIFESTO */
+.s-mani{display:flex;flex-direction:column;align-items:center;gap:48px;max-width:720px;margin:0 auto;}
+.mani-body{display:flex;flex-direction:column;gap:32px;text-align:center;}
+
+/* DEFINITION */
+.s-def-wrap{padding:0;border-bottom:1px solid var(--pt700);}
+.s-def{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--pt700);}
+.def-col{background:var(--qblack);padding:80px 64px;text-align:center;}
+.def-head{margin-bottom:40px;padding-bottom:40px;border-bottom:1px solid var(--pt700);}
+.def-list{list-style:none;}
+.def-list li{display:flex;gap:24px;align-items:flex-start;padding:16px 0;border-bottom:1px solid rgba(51,51,49,.5);font-size:14px;line-height:1.6;color:var(--pt300);letter-spacing:.02em;text-align:left;}
+.def-list li .sym{color:var(--silver);flex-shrink:0;font-size:10px;margin-top:3px;}
+.def-list.not li .sym{color:var(--pt600);}
+
+/* AGENDA */
+.ag-head{display:flex;flex-direction:column;align-items:center;gap:32px;margin-bottom:64px;padding-bottom:64px;border-bottom:1px solid var(--pt700);max-width:640px;margin-left:auto;margin-right:auto;}
+.days{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--pt700);}
+.day{background:var(--qblack);padding:40px 32px;transition:background .25s;text-align:center;}
+.day:hover{background:var(--dcharcoal);}
+.d-num{font-size:8px;letter-spacing:.45em;text-transform:uppercase;color:var(--pt500);display:block;margin-bottom:8px;}
+.d-name{font-family:var(--fd);font-weight:300;font-size:20px;color:var(--white);display:block;margin-bottom:32px;line-height:1.2;}
+.d-items{list-style:none;display:flex;flex-direction:column;gap:10px;}
+.d-items li{font-size:13px;line-height:1.5;color:var(--pt400);letter-spacing:.03em;padding-left:0;position:relative;text-align:center;}
+.d-items li::before{content:'— ';color:var(--pt600);}
+
+/* PROTOCOLS */
+.pr-head{display:flex;flex-direction:column;align-items:center;gap:32px;margin-bottom:64px;padding-bottom:64px;border-bottom:1px solid var(--pt700);max-width:640px;margin-left:auto;margin-right:auto;}
+.protos{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--pt700);}
+.proto{background:var(--qblack);padding:40px 32px;transition:background .25s;text-align:center;}
+.proto:hover{background:var(--dcharcoal);}
+.pr-idx{font-size:8px;letter-spacing:.4em;color:var(--pt600);display:block;margin-bottom:32px;font-weight:400;}
+.pr-name{font-family:var(--fd);font-weight:300;font-size:18px;color:var(--white);display:block;margin-bottom:20px;line-height:1.2;}
+.pr-desc{font-size:14px;line-height:23px;color:var(--pt400);letter-spacing:.02em;}
+
+/* STEM */
+.s-stem{background:var(--dcharcoal);}
+.stem-grid{display:flex;flex-direction:column;align-items:center;gap:64px;max-width:800px;margin:0 auto;}
+.stem-badge{display:inline-block;border:1px solid var(--pt600);color:var(--pt400);font-size:7px;letter-spacing:.45em;text-transform:uppercase;padding:7px 16px;margin-bottom:40px;}
+.stem-pts{display:flex;flex-direction:column;gap:1px;margin-top:40px;width:100%;}
+.stem-pt{background:var(--qblack);padding:32px 24px;border-left:none;border-top:1px solid var(--pt700);text-align:center;}
+.stem-pt:first-child{border-top-color:var(--silver);}
+.spt-t{font-family:var(--fd);font-weight:300;font-size:16px;color:var(--white);display:block;margin-bottom:10px;}
+.spt-d{font-size:14px;line-height:23px;color:var(--pt400);}
+
+/* WHO */
+.who-head{margin-bottom:64px;padding-bottom:64px;border-bottom:1px solid var(--pt700);text-align:center;margin-left:auto;margin-right:auto;}
+.who-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--pt700);}
+.who-c{background:var(--qblack);padding:40px 32px;transition:background .25s;text-align:center;}
+.who-c:hover{background:var(--dcharcoal);}
+.who-type{font-family:var(--fd);font-weight:300;font-size:17px;color:var(--white);display:block;margin-bottom:20px;line-height:1.25;}
+.who-desc{font-size:14px;line-height:23px;color:var(--pt400);}
+
+/* PHASE */
+.s-phase{background:var(--dcharcoal);}
+.ph-grid{display:flex;flex-direction:column;align-items:center;gap:64px;max-width:680px;margin:0 auto;}
+.ph-list{list-style:none;margin-top:40px;display:flex;flex-direction:column;width:100%;}
+.ph-list li{display:flex;gap:24px;align-items:flex-start;padding:16px 0;border-bottom:1px solid var(--pt700);font-size:14px;line-height:1.6;color:var(--pt300);text-align:left;}
+.ph-list li .sym{color:var(--silver);flex-shrink:0;font-size:10px;margin-top:4px;}
+
+/* CTA */
+.s-cta{padding:140px 72px;border-bottom:none;text-align:center;}
+.cta-grid{display:flex;flex-direction:column;align-items:center;gap:48px;padding-bottom:80px;border-bottom:1px solid var(--pt700);margin-bottom:80px;}
+.cta-h{font-family:var(--fd);font-weight:300;font-size:clamp(40px,6vw,64px);line-height:1.05;color:var(--white);text-align:center;}
+.cta-h em{font-style:italic;color:var(--pt300);}
+.cta-r{display:flex;flex-direction:column;gap:32px;align-items:center;}
+.cta-stats{display:flex;gap:80px;justify-content:center;}
+.stat{display:flex;flex-direction:column;gap:6px;align-items:center;text-align:center;}
+.sv{font-family:var(--fd);font-weight:300;font-size:32px;color:var(--white);letter-spacing:.02em;}
+.sl{font-size:8px;letter-spacing:.38em;text-transform:uppercase;color:var(--pt500);}
+
+/* FOUNDERS NOTE */
+.s-fn{background:var(--dcharcoal);}
+.fn-wrap{display:flex;flex-direction:column;align-items:center;gap:48px;max-width:720px;margin:0 auto;}
+.fn-quotes{display:flex;flex-direction:column;gap:1px;width:100%;margin-top:16px;}
+.fn-q{background:var(--qblack);padding:48px 40px;border-top:1px solid var(--pt700);text-align:center;}
+.fn-q:first-child{border-top-color:var(--silver);}
+.fn-q p{font-family:var(--fd);font-style:italic;font-weight:300;font-size:18px;line-height:1.55;color:var(--pt200);}
+.fn-sig{font-family:var(--fb);font-weight:400;font-size:9px;letter-spacing:.4em;text-transform:uppercase;color:var(--pt400);display:block;margin-top:24px;}
+
+/* INVESTMENT */
+.inv-head{display:flex;flex-direction:column;align-items:center;gap:32px;margin-bottom:64px;padding-bottom:64px;border-bottom:1px solid var(--pt700);max-width:640px;margin-left:auto;margin-right:auto;}
+.inv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--pt700);}
+.inv-c{background:var(--qblack);padding:56px 32px;transition:background .25s;text-align:center;display:flex;flex-direction:column;align-items:center;}
+.inv-c:hover{background:var(--dcharcoal);}
+.inv-c.deep{border-top:1px solid var(--silver);}
+.inv-idx{font-size:8px;letter-spacing:.4em;color:var(--pt600);display:block;margin-bottom:28px;font-weight:400;text-transform:uppercase;}
+.inv-name{font-family:var(--fd);font-weight:300;font-size:22px;color:var(--white);display:block;margin-bottom:24px;line-height:1.2;}
+.inv-price{font-family:var(--fd);font-weight:300;font-size:34px;color:var(--white);display:block;letter-spacing:.02em;line-height:1;}
+.inv-cur{font-size:8px;letter-spacing:.38em;text-transform:uppercase;color:var(--pt500);display:block;margin:10px 0 32px;}
+.inv-desc{font-size:14px;line-height:23px;color:var(--pt400);letter-spacing:.02em;max-width:280px;}
+@media(max-width:960px){.inv-grid{grid-template-columns:1fr;}}
+
+/* FOOTER */
+footer{padding:40px 72px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:32px;}
+.f-note{font-size:11px;letter-spacing:.12em;color:var(--pt500);}
+
+/* RESPONSIVE */
+@media(max-width:960px){
+  nav{padding:24px 40px;}
+  section{padding:96px 40px;}
+  .hero{padding:140px 40px 64px;}
+  .s-def{grid-template-columns:1fr;}
+  .days,.who-grid{grid-template-columns:1fr 1fr;}
+  .protos{grid-template-columns:1fr 1fr;}
+  .h-bottom{flex-wrap:wrap;gap:32px;justify-content:center;}
+  footer{padding:32px 40px;}
+}
+@media(max-width:600px){
+  nav{padding:24px;}
+  section{padding:72px 24px;}
+  .hero{padding:120px 24px 56px;}
+  .days,.protos,.who-grid{grid-template-columns:1fr;}
+  .def-col{padding:48px 24px;}
+  .h-cta{flex-direction:column;align-items:center;}
+  .cta-stats{flex-wrap:wrap;gap:32px;}
+  footer{padding:32px 24px;flex-direction:column;align-items:center;text-align:center;}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wm">
+    <span class="wm-the">T H E</span>
+    <span class="wm-q">QUANTUM</span>
+    <span class="wm-m">M E T H O D</span>
+  </div>
+  <a href="https://form.typeform.com/to/x69yMBP6" target="_blank" class="btn">Apply to Join</a>
+</nav>
+
+<section class="hero">
+  <div class="hero-inner">
+    <p class="h-over">20 – 23 August 2026 &nbsp;·&nbsp; Cuernavaca, Mexico &nbsp;·&nbsp; First Edition</p>
+    <div class="hwl">
+      <span class="hwl-the">T H E</span>
+      <span class="hwl-q">QUANTUM</span>
+      <span class="hwl-r">R E T R E A T</span>
+    </div>
+    <div class="h-rule"></div>
+    <p class="h-tag">A quantum leap into your next self.</p>
+    <div class="h-cta">
+      <a href="https://form.typeform.com/to/x69yMBP6" target="_blank" class="btn">Apply to Join</a>
+      <p class="h-meta">Limited capacity &nbsp;·&nbsp; Selection based on readiness</p>
+    </div>
+  </div>
+  <div class="h-bottom">
+    <div class="hbs"><span class="hbs-v">Four days.</span><span class="hbs-l">Immersive experience</span></div>
+    <div class="hbs"><span class="hbs-v">~40</span><span class="hbs-l">Curated participants</span></div>
+    <div class="hbs"><span class="hbs-v">360°</span><span class="hbs-l">Clinical assessment</span></div>
+    <div class="hbs"><span class="hbs-v">Mexico's first.</span><span class="hbs-l">Physiology · EQ · Regenerative medicine</span></div>
+  </div>
+</section>
+
+<section>
+  <div class="s-mani">
+    <div><span class="s-label">The Problem</span></div>
+    <div class="mani-body">
+      <p class="t-body">High performers are optimized externally. Internally, they are dysregulated. Burnout is normalized. Longevity is compromised. Wellness spaces lack ambition. Medical spaces lack context.</p>
+      <p class="t-pull">"You didn't burn out. You outran your own biology."</p>
+      <p class="t-body">The cost of chronic high performance accumulates in ways not yet visible — in your cells, your decisions, relationships. The Quantum Retreat exists to interrupt that trajectory.</p>
+      <p class="t-body">This is not a retreat for rest. It is a reset for execution.</p>
+    </div>
+  </div>
+</section>
+
+<div class="s-def-wrap">
+  <div style="padding:96px 72px 64px;text-align:center;">
+    <span class="s-label">What to Expect</span>
+    <h2 class="t-h2">The before and after.</h2>
+  </div>
+  <div class="s-def">
+    <div class="def-col" style="padding-top:56px;">
+      <div class="def-head"><span class="s-label" style="color:var(--pt600);margin-bottom:0;">You arrive</span></div>
+      <ul class="def-list not">
+        <li><span class="sym">—</span>Running on willpower, not physiology</li>
+        <li><span class="sym">—</span>Decision fatigue normalized as the cost of doing business</li>
+        <li><span class="sym">—</span>A biology that has never been properly measured</li>
+      </ul>
+    </div>
+    <div class="def-col" style="border-left:1px solid var(--pt700);padding-top:56px;">
+      <div class="def-head"><span class="s-label" style="margin-bottom:0;">You leave</span></div>
+      <ul class="def-list">
+        <li><span class="sym">—</span>Your biological baseline measured — cellular, hormonal, nutritional</li>
+        <li><span class="sym">—</span>A personalized longevity protocol in hand, built on your results</li>
+        <li><span class="sym">—</span>A clearer internal signal for what comes next</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="s-def-wrap">
+  <div class="s-def">
+    <div class="def-col">
+      <div class="def-head"><span class="s-label" style="color:var(--pt600);margin-bottom:0;">This is not</span></div>
+      <ul class="def-list not">
+        <li><span class="sym">—</span>A large wellness event</li>
+        <li><span class="sym">—</span>Surface-level self-help content</li>
+        <li><span class="sym">—</span>Passive attendance or lectures</li>
+        <li><span class="sym">—</span>Optimization theater</li>
+        <li><span class="sym">—</span>Open to the public</li>
+        <li><span class="sym">—</span>A vacation with a wellness label</li>
+      </ul>
+    </div>
+    <div class="def-col" style="border-left:1px solid var(--pt700);">
+      <div class="def-head"><span class="s-label" style="margin-bottom:0;">This is</span></div>
+      <ul class="def-list">
+        <li><span class="sym">—</span>A curated cohort of ~40 high-performers</li>
+        <li><span class="sym">—</span>A high-trust, no-passive-attendance environment</li>
+        <li><span class="sym">—</span>Clinical protocols grounded in regenerative medicine</li>
+        <li><span class="sym">—</span>Nervous system regulation — not mindset content</li>
+        <li><span class="sym">—</span>Selection based on readiness and fit</li>
+        <li><span class="sym">—</span>The founding moment of something permanent</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<section>
+  <div class="ag-head">
+    <div><span class="s-label">The Experience</span><h2 class="t-h2">Four days. One complete reset.</h2></div>
+    <div><p class="t-body">The program is structured across four days — each with a specific physiological and psychological intention. Nothing is accidental. Every session builds on the one before.</p></div>
+  </div>
+  <div class="days">
+    <div class="day">
+      <span class="d-num">Day 01 · Thursday</span>
+      <span class="d-name">Arrival &amp;<br>Diagnosis</span>
+      <ul class="d-items">
+        <li>Oligocheck 360° clinical assessment</li>
+        <li>Cellular &amp; nutritional baseline</li>
+        <li>Personal Finance Master Class</li>
+        <li>Icebreaker session</li>
+        <li>Welcome dinner</li>
+      </ul>
+    </div>
+    <div class="day">
+      <span class="d-num">Day 02 · Friday</span>
+      <span class="d-name">Body &amp;<br>Breath</span>
+      <ul class="d-items">
+        <li>Yoga in the garden</li>
+        <li>Breathwork &amp; intention setting</li>
+        <li>Open heart dynamic</li>
+        <li>Adaptogens beverage program</li>
+        <li>Integration dinner</li>
+      </ul>
+    </div>
+    <div class="day">
+      <span class="d-num">Day 03 · Saturday</span>
+      <span class="d-name">Deep<br>Reset</span>
+      <ul class="d-items">
+        <li>Walking meditation at dawn</li>
+        <li>Braintap neuro-meditation</li>
+        <li>Footbath detox + IV drip</li>
+        <li>Red light therapy &amp; journaling</li>
+        <li>White dinner ceremony</li>
+      </ul>
+    </div>
+    <div class="day">
+      <span class="d-num">Day 04 · Sunday</span>
+      <span class="d-name">Integration &amp;<br>Next</span>
+      <ul class="d-items">
+        <li>Closing ceremony</li>
+        <li>Farewell breakfast</li>
+        <li>Personal protocol delivery</li>
+        <li>Founding member pathway</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="pr-head">
+    <div><span class="s-label">Clinical Protocols</span><h2 class="t-h2">Regenerative medicine at the core.</h2></div>
+    <div><p class="t-body">Each protocol is evidence-based and individually calibrated. The diagnostics begin on arrival. Nothing is generic.</p></div>
+  </div>
+  <div class="protos">
+    <div class="proto"><span class="pr-idx">Protocol 01</span><span class="pr-name">Oligocheck 360°</span><p class="pr-desc">Full-spectrum clinical study measuring cellular, hormonal and nutritional levels. Establishes your biological baseline before any intervention begins.</p></div>
+    <div class="proto"><span class="pr-idx">Protocol 02</span><span class="pr-name">Braintap Meditation</span><p class="pr-desc">Neuro-meditation technology for brainwave optimization and cognitive recovery.</p></div>
+    <div class="proto"><span class="pr-idx">Protocol 03</span><span class="pr-name">IV Drip Therapy</span><p class="pr-desc">Personalized intravenous nutrient infusions calibrated to your Oligocheck results. Cellular rehydration and accelerated performance recovery.</p></div>
+    <div class="proto"><span class="pr-idx">Protocol 04</span><span class="pr-name">Red Light Therapy</span><p class="pr-desc">Photobiomodulation for mitochondrial function, cellular energy production and systemic inflammation reduction at the regenerative clinic.</p></div>
+    <div class="proto"><span class="pr-idx">Protocol 05</span><span class="pr-name">Footbath Detox</span><p class="pr-desc">Ionic detoxification targeting heavy metal elimination and lymphatic activation. A foundational reset for the cellular environment.</p></div>
+    <div class="proto"><span class="pr-idx">Protocol 06</span><span class="pr-name">Adaptogens Program</span><p class="pr-desc">Curated botanical and functional beverage protocols to regulate cortisol, support HRV and restore nervous system resilience.</p></div>
+  </div>
+</section>
+
+<section class="s-stem">
+  <div class="stem-grid">
+    <div>
+      <span class="stem-badge">Advanced Protocol · Optional</span>
+      <h2 class="t-h2" style="margin-bottom:32px;">Stem cell access.<br>For those who qualify.</h2>
+      <p class="t-body" style="margin-bottom:24px;">For participants who qualify, we offer access to stem cell therapy — one of the most advanced regenerative protocols available today.</p>
+      <p class="t-body">Access is determined by Oligocheck results and individual evaluation. Not every participant qualifies.</p>
+      <p class="t-caption" style="margin-top:40px;">All protocols supervised by board-certified physicians. Individual results may vary. This protocol is optional and subject to clinical evaluation.</p>
+    </div>
+    <div>
+      <div class="stem-pts">
+        <div class="stem-pt"><span class="spt-t">Cellular Renewal</span><p class="spt-d">Stem cell therapies work at the root of biological aging, regenerating tissues and restoring cellular function compromised by chronic high performance.</p></div>
+        <div class="stem-pt"><span class="spt-t">Individual Assessment</span><p class="spt-d">Protocol is calibrated, never generic.</p></div>
+        <div class="stem-pt"><span class="spt-t">Frontier Medicine</span><p class="spt-d">The Quantum Method integrates frontier regenerative medicine into a structured, medically supervised protocol for eligible participants.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="fn-wrap">
+    <div><span class="s-label">From the Founders</span><h2 class="t-h2">We were the first protocol.</h2></div>
+    <div class="fn-quotes">
+      <div class="fn-q">
+        <p>"These protocols gave me a routine that actually sustains me. My Hashimoto's is under control. I went from barely sleeping to sleeping deeply — from three functional hours a day to working at full capacity again. This isn't theory for me. It's my own recovery."</p>
+        <span class="fn-sig">Tamara Chayo &nbsp;·&nbsp; Co-founder</span>
+      </div>
+      <div class="fn-q">
+        <p>"My Mobitz block is under control — my cardiologist saw the difference before I even told him what I'd changed. These protocols aren't something we designed on paper. They're the reason I function the way I do today."</p>
+        <span class="fn-sig">Karla Huerta &nbsp;·&nbsp; Co-founder</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="who-head">
+    <span class="s-label">Who Attends</span>
+    <h2 class="t-h2" style="margin-bottom:20px;">Built for those who carry real weight.</h2>
+    <p class="t-body">Selection is based on readiness, not title.</p>
+  </div>
+  <div class="who-grid">
+    <div class="who-c"><span class="who-type">Founders &amp;<br>Builders</span><p class="who-desc">Navigating inflection points, scale decisions, or the weight of building something that matters. The internal work is next.</p></div>
+    <div class="who-c"><span class="who-type">Investors &amp;<br>Operators</span><p class="who-desc">Carrying decision load at scale. The clarity you need is not a framework. It is in your nervous system.</p></div>
+    <div class="who-c"><span class="who-type">Creators &amp;<br>Visionaries</span><p class="who-desc">Entering irreversible transitions. Building in public, betting on yourself. You need a reset that matches your ambition.</p></div>
+    <div class="who-c"><span class="who-type">High-Performance<br>Leaders</span><p class="who-desc">You perform. You deliver. But the signal-to-noise ratio has shifted. You need space that holds both your ambition and your humanity.</p></div>
+  </div>
+</section>
+
+<section>
+  <div class="inv-head">
+    <div><span class="s-label">Investment</span><h2 class="t-h2">One experience. Three depths of protocol.</h2></div>
+    <div><p class="t-body">Your investment is all-inclusive — accommodation, all meals, and the complete four-day immersion. Your protocol depth determines how far the clinical intervention goes.</p></div>
+  </div>
+  <div class="inv-grid">
+    <div class="inv-c">
+      <span class="inv-idx">Depth 01</span>
+      <span class="inv-name">The Reset</span>
+      <span class="inv-price">$3,600</span>
+      <span class="inv-cur">USD</span>
+      <p class="inv-desc">The complete immersion. Accommodation, all meals, Oligocheck 360° clinical assessment, all core protocols, and your personalized longevity protocol on departure.</p>
+    </div>
+    <div class="inv-c">
+      <span class="inv-idx">Depth 02</span>
+      <span class="inv-name">The Regeneration</span>
+      <span class="inv-price">$4,200</span>
+      <span class="inv-cur">USD</span>
+      <p class="inv-desc">Everything in The Reset, plus a personalized peptide protocol — targeted molecular signaling for recovery, energy and cellular repair, calibrated to your clinical results.</p>
+    </div>
+    <div class="inv-c deep">
+      <span class="inv-idx">Depth 03</span>
+      <span class="inv-name">The Full Protocol</span>
+      <span class="inv-price">$4,500</span>
+      <span class="inv-cur">USD</span>
+      <p class="inv-desc">The deepest intervention available. Everything in The Regeneration, plus personalized stem cell therapy — frontier regenerative medicine, medically supervised and designed around your biology.</p>
+    </div>
+  </div>
+  <p class="t-caption" style="margin-top:48px;">Advanced protocols are entirely optional — nothing is applied by default. Participation in peptide or stem cell therapy is chosen by you and subject to individual clinical evaluation. Protocol depth is confirmed during the application process.</p>
+</section>
+
+<section class="s-cta">
+  <div class="cta-grid">
+    <div>
+      <span class="s-label">Applications Open</span>
+      <h2 class="cta-h">Your biology is the<br>first system<br><em>worth optimizing.</em></h2>
+    </div>
+    <div class="cta-r">
+      <p class="t-body">Participation is limited to ~40 places. Applications are reviewed personally — selection is based on readiness and fit, not title. Once the cohort is full, applications join the waitlist for future editions.</p>
+      <div><a href="https://form.typeform.com/to/x69yMBP6" target="_blank" class="btn">Request Your Place</a></div>
+      <p class="t-caption">Cuernavaca, Mexico &nbsp;·&nbsp; August 20–23, 2026 &nbsp;·&nbsp; Limited spots available</p>
+    </div>
+  </div>
+  <div class="cta-stats">
+    <div class="stat"><span class="sv">~40</span><span class="sl">Curated participants</span></div>
+    <div class="stat"><span class="sv">4</span><span class="sl">Immersive days</span></div>
+    <div class="stat"><span class="sv">360°</span><span class="sl">Clinical assessment</span></div>
+    <div class="stat"><span class="sv">All-in</span><span class="sl">Lodging &amp; meals included</span></div>
+  </div>
+</section>
+
+<footer>
+  <div class="wm">
+    <span class="wm-the">T H E</span>
+    <span class="wm-q">QUANTUM</span>
+    <span class="wm-m">M E T H O D</span>
+  </div>
+  <p class="f-note">By Tamara &amp; Karla &nbsp;·&nbsp; Cuernavaca, Mexico &nbsp;·&nbsp; 2026</p>
+  <a href="https://form.typeform.com/to/x69yMBP6" target="_blank" class="btn" style="font-size:7px;padding:10px 20px;">Apply Now</a>
+</footer>
+
+</body>
+</html>
